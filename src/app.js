@@ -4,12 +4,13 @@ import cookieParser from "cookie-parser";
 import indexRoutes from "./routes/index.routes.js";
 import authRoutes from "./routes/auth.routes.js";
 import cors from "cors";
+import { FRONT_URL } from "./config.js";
 
 const app = express();
 
 app.use(
   cors({
-    origin: "https://task4ilearningclient-production.up.railway.app",
+    origin: FRONT_URL,
     credentials: true,
   }),
 );
